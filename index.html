@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker</title>
+
+    <!-- custom file css -->
+    <link rel="stylesheet" href="./CSS/book-ticket.css">
+
+    <!-- file calendar css -->
+    <link rel="stylesheet" href="./CSS/Calendar.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ĐIỂM KHỞI HÀNH -->
+    <!-- <div class="place-start">
+        <i class="fas fa-backspace"></i>
+        <div>Thành phố hồ chí minh (SGN)</div>
+        <div>Đà Nẵng (DAD), Việt Nam</div>
+        <div>Phú Quốc (PQC), Việt Nam</div>
+        <div>Nha Trang (CXR), Việt Nam</div>
+    </div> -->
+
+    <div class="book-ticket">
+
+        <div class="client-fly">
+
+            <i class="fas fa-backspace exit-icon"></i>
+
+            <div class="client__support">
+                <a href="#"><i>Yêu cầu trợ giúp đặc biệt</i></a>
+                <i class="fa fa-exclamation-circle"></i>
+            </div>
+
+            <div class="client-fly__adult"> 
+                <div class="adult__wrapper">
+                    <i class="fas fa-male"></i>
+                    <div class="wrapper__content">
+                        <span>Người lớn</span>
+                        <span>12 tuổi trở lên</span>
+                    </div>
+                </div>
+                <div class="adult__number">
+                    <button><i class="fas fa-minus"></i></button>
+                    <span class="adult-number">0</span>
+                    <button><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+            <div class="client-fly__adult"> 
+                <div class="adult__wrapper">
+                    <i class="fas fa-child children-icon"></i>
+                    <div class="wrapper__content">
+                        <span>Trẻ em</span>
+                        <span>2-11 tuổi</span>
+                    </div>
+                </div>
+                <div class="adult__number">
+                    <button><i class="fas fa-minus"></i></button>
+                    <span class="children-number">0</span>
+                    <button><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+            <div class="client-fly__adult"> 
+                <div class="adult__wrapper">
+                    <i class="fas fa-baby baby-icon"></i>
+                    <div class="wrapper__content">
+                        <span>Em bé</span>
+                        <span>Dưới 2 tuổi</span>
+                    </div>
+                </div>
+                <div class="adult__number">
+                    <button><i class="fas fa-minus"></i></button>
+                    <span class="baby-number">0</span>
+                    <button><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="calendar">
+
+            <!-- BUTTON EXIT THE CALENDAR -->
+            <i class="fas fa-backspace"></i>
+
+            <div class="calendar-header">
+                <div class="change" id="previous-month">
+                    <i class="fas fa-sort-up"></i>
+                </div>
+                <div class="calendar-wrapper">
+                    <div class="month-picker" id="month-picker">
+                        <span>Tháng</span> <span>2</span>
+                    </div>
+                    <div class="year-picker" id="year-picker">
+                        2021
+                    </div>
+                </div>
+                <div class="change" id="next-month">
+                    <i class="fas fa-sort-up"></i>
+                </div>
+    
+    
+            </div>
+    
+            <div class="calendar-body">
+    
+                <div class="days-of-week">
+                    <span>CN</span>
+                    <span>Thứ 2</span>
+                    <span>Thứ 3</span>
+                    <span>Thứ 4</span>
+                    <span>Thứ 5</span>
+                    <span>Thứ 6</span>
+                    <span>Thứ 7</span>
+                </div>
+    
+                <div class="days-of-month">
+                    <div>
+                        1
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="place-start">
+            <i class="fas fa-backspace"></i>
+            <div>TP HCM (SGN)</div>
+            <div>Đà Nẵng (DAD)</div>
+            <div>Phú Quốc (PQC)</div>
+            <div>Nha Trang (CXR)</div>
+            <div>Cà Mau (CAH)</div>
+            <div>Đà Lạt (DLI)</div>
+        </div>
+        
+        <div class="place-end">
+            <i class="fas fa-backspace"></i>
+            <div>TP HCM (SGN)</div>
+            <div>Đà Nẵng (DAD)</div>
+            <div>Phú Quốc (PQC)</div>
+            <div>Nha Trang (CXR)</div>
+            <div>Cà May (CAH)</div>
+            <div>Đà Lạt (DLI)</div>
+        </div>
+    
+        <div class="book-ticket__service">
+            <div class="service__food">Mua hành lý, suất ăn, chọn chỗ ngồi và hơn thế nữa...</div>
+            <div class="service__send-package">Gửi hàng nhanh</div>
+        </div>
+        <div class="book-ticket__content">
+
+            <div class="book-ticket__top">
+                <span>Một chiều</span>
+                <div class="top__price">
+                    <span>VND</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="book-ticket__middle">
+                <div class="middle__point-start">
+                    <!-- PUSH ĐIỂM KHỞI HÀNH HERE -->
+                    <div class="point-start__left">
+                        <i class="fas fa-plane"></i>
+                        <span>Điểm khởi hành</span>
+                    </div>
+                    <div class="point-start__right">
+                        <span>Ngày đi</span>
+                        <span>27/09/2021</span>
+                    </div>
+                </div>
+                <div class="middle__point-end">
+                    <i class="fas fa-plane"></i>
+                    <span>Điểm đến</span>
+                </div>
+
+                <div class="middle__client">
+                    <i class="fas fa-user"></i>
+                    <div class="middle__client-wrapper">
+                        <span class="client__title">Hàng khách</span>
+                        <span class="client__choose-flyer">1 người lớn</span>
+                    </div>
+                </div>
+
+                <div class="middle__sale-ticket">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>Mã khuyến mại</span>
+                </div>
+
+            </div>
+
+            <div class="book-ticket__bottom">
+                <div class="bottom__checkbox">
+                    <i class="fas "></i>
+                    <span>Tìm vé rẻ nhất</span>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="button"><a href="#" class="button__find-fly">Tìm chuyến bay</a></div>
+
+        </div>
+
+    </div>
+
+    <!-- custom file js -->
+    <script src="./JS/NumberClients.js"></script>
+    <script src="JS/Calendar.js"></script>
+    <script src="./JS/Checkbox.js"></script>
+    <script src="./JS/ChoosePlaceFly.js"></script>
+</body>
+</html>
